@@ -13,10 +13,10 @@ export class SaldosController {
     @Query('sumarTodosLosSaldos') sumarTodosLosSaldos: string,
   ): Promise<number> {
     if (sumarTodosLosSaldos === undefined) {
-      throw new BadRequestException('Parametro requerido');
+      throw new BadRequestException('Parámetro requerido');
     }
     if (sumarTodosLosSaldos != 'true' && sumarTodosLosSaldos != 'false') {
-      throw new BadRequestException('Parametro invalido');
+      throw new BadRequestException('Parámetro inválido');
     }
     return this.saldosService.getSumaTodosLosSaldos(sumarTodosLosSaldos);
   }

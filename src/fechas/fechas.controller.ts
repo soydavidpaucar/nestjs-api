@@ -11,10 +11,10 @@ export class FechasController {
   @Get()
   async getFechasByOrder(@Query('order') order: string): Promise<any> {
     if (order === undefined) {
-      throw new BadRequestException('Parametro requerido');
+      throw new BadRequestException('Parámetro requerido');
     }
     if (order != 'asc' && order != 'desc') {
-      throw new BadRequestException('Parametro invalido');
+      throw new BadRequestException('Parámetro invalido');
     }
     return this.fechasService.getFechasByOrder(order);
   }
