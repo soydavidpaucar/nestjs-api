@@ -17,10 +17,6 @@ Follow the next steps to install the application in your local machine:
    ```
 3. Run the application with the following command
    ```sh
-   yarn start
-   ```
-   or
-   ```sh
    npm start
    ```
 
@@ -32,5 +28,5 @@ Follow the next steps to install the application in your local machine:
       `http://localhost:3000/v1/fechas?order=asc`
       or
       `http://localhost:3000/v1/fechas?order=desc`
-   2. To get the sum all saldos
+   2. To get the sum of all saldos
       `http://localhost:3000/v1/saldos?sumarTodosLosSaldos=true`
