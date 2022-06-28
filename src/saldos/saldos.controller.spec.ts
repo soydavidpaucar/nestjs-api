@@ -20,12 +20,10 @@ describe('SaldosController', () => {
     it('debe retornar un número', async () => {
       const result = 2555.5;
       jest
-        .spyOn(saldosService, 'getFechasBySumaTodosLosSaldos')
+        .spyOn(saldosService, 'getSumaTodosLosSaldos')
         .mockImplementation(() => result);
 
-      expect(await saldosController.getFechasByTodosLosSados('true')).toBe(
-        result,
-      );
+      expect(await saldosController.getSumaTodosLosSaldos('true')).toBe(result);
     });
   });
 });

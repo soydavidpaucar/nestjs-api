@@ -9,15 +9,15 @@ export class SaldosController {
   constructor(private saldosService: SaldosService) {}
 
   @Get()
-  async getFechasByTodosLosSados(
-    @Query('sumarTodosLosSaldos') sumarAllSaldos: string,
+  async getSumaTodosLosSaldos(
+    @Query('sumarTodosLosSaldos') sumarTodosLosSaldos: string,
   ): Promise<number> {
-    if (sumarAllSaldos === undefined) {
+    if (sumarTodosLosSaldos === undefined) {
       throw new BadRequestException('Parametro requerido');
     }
-    if (sumarAllSaldos != 'true' && sumarAllSaldos != 'false') {
+    if (sumarTodosLosSaldos != 'true' && sumarTodosLosSaldos != 'false') {
       throw new BadRequestException('Parametro invalido');
     }
-    return this.saldosService.getFechasBySumaTodosLosSaldos(sumarAllSaldos);
+    return this.saldosService.getSumaTodosLosSaldos(sumarTodosLosSaldos);
   }
 }

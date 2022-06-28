@@ -9,7 +9,7 @@ export class SaldosService {
     { fecha: new Date('2012-01-0'), saldoNuevo: 1205 },
   ];
 
-  getFechasBySumaTodosLosSaldos(sumarTodosLosSaldos: string): number {
+  getSumaTodosLosSaldos(sumarTodosLosSaldos: string): number {
     if (sumarTodosLosSaldos == 'true') {
       let saldoTotal = 0;
       this.fechas.forEach((fecha) => {
